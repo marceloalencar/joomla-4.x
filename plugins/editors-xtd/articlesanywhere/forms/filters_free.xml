@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldprefix="RegularLabs\Library\Form\Field">
+	<fieldset addfieldprefix="Joomla\Component\Content\Administrator\Field">
+		<!-- ARTICLE -->
+		<field name="article_type" type="Radio" default="select"
+			   class="btn-group rl-btn-group btn-group-md"
+			   label="RL_ARTICLE">
+			<option value="select" class="btn btn-outline-info">RL_SELECT</option>
+			<option value="current" class="btn btn-outline-info">RL_CURRENT</option>
+		</field>
+		<field name="@article_select__a" type="ShowOn" value="article_type:select" />
+		<field name="article" type="ContentArticles"
+			   multiple="false" showselect="true" />
+		<field name="article_key" type="Radio" default="title"
+			   class="btn-group rl-btn-group btn-group-md"
+			   label="AA_INSERT_KEY">
+			<option value="id" class="btn btn-outline-info">JGLOBAL_FIELD_ID_LABEL</option>
+			<option value="title" class="btn btn-outline-info">JGLOBAL_TITLE</option>
+		</field>
+		<field name="@article_select__b" type="ShowOn" />
+	</fieldset>
+</form>

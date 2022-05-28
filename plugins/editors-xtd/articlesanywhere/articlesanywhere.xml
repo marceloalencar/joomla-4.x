@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.0" type="plugin" group="editors-xtd" method="upgrade">
+	<name>PLG_EDITORS-XTD_ARTICLESANYWHERE</name>
+	<description>PLG_EDITORS-XTD_ARTICLESANYWHERE_DESC</description>
+	<version>12.3.1</version>
+	<creationDate>May 2022</creationDate>
+	<author>Regular Labs (Peter van Westen)</author>
+	<authorEmail>info@regularlabs.com</authorEmail>
+	<authorUrl>https://regularlabs.com</authorUrl>
+	<copyright>Copyright © 2022 Regular Labs - All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<namespace path="src">RegularLabs\Plugin\EditorButton\ArticlesAnywhere</namespace>
+
+	<scriptfile>script.install.php</scriptfile>
+
+	<updateservers>
+		<server type="extension" priority="1" name="Regular Labs - Articles Anywhere">
+			https://download.regularlabs.com/updates.xml?e=articlesanywhere&amp;type=.xml
+		</server>
+	</updateservers>
+
+	<files>
+		<file plugin="articlesanywhere">articlesanywhere.php</file>
+		<file>script.install.helper.php</file>
+		<folder>forms</folder>
+		<folder>language</folder>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<media folder="media" destination="articlesanywhere">
+		<folder>js</folder>
+	</media>
+
+	<config>
+		<fields name="params" addfieldprefix="RegularLabs\Library\Form\Field">
+			<fieldset name="basic">
+				<field name="@load_language_regularlabs" type="LoadLanguage" extension="plg_system_regularlabs" />
+				<field name="@license" type="License" extension="ARTICLESANYWHERE" />
+				<field name="@version" type="Version" extension="ARTICLESANYWHERE" />
+				<field name="@dependency_plugin" type="Dependency"
+					   label="AA_THE_SYSTEM_PLUGIN"
+					   file="/plugins/system/articlesanywhere/articlesanywhere.xml" />
+				<field name="@header" type="Header"
+					   label="ARTICLESANYWHERE"
+					   description="ARTICLESANYWHERE_DESC"
+					   url="https://regularlabs.com/articlesanywhere" />
+
+				<field name="@note__settings" type="Note" class="rl-alert alert alert-info rl-alert-light"
+					   text="AA_SETTINGS,&lt;a href=&quot;index.php?option=com_plugins&amp;filter[folder]=system&amp;filter[search]=articles anywhere&quot; target=&quot;_blank&quot;&gt;,&lt;/a&gt;" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

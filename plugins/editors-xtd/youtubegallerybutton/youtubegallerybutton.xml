@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" method="upgrade" group="editors-xtd">
+        <name>plg_editors-xtd_youtubegallerybutton</name>
+        <author>JoomlaBoat.com</author>
+        <creationDate>October, 2021</creationDate>
+        <copyright>Ivan Komlev. All rights reserved.</copyright>
+        <license>GPL</license>
+        <authorEmail>support@joomlaboat.com</authorEmail>
+        <authorUrl>https://joomlaboat.com</authorUrl>
+        <version>5.4.2</version>
+        <description>PLG_YOUTUBEGALLERYBUTTON_XML_DESCRIPTION</description>
+        <files>
+                <filename plugin="youtubegallerybutton">youtubegallerybutton.php</filename>
+                <filename>youtube-logo.png</filename>
+        </files>
+
+   	<languages>
+	      <language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_youtubegallerybutton.ini</language>
+	      <language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_youtubegallerybutton.sys.ini</language>
+	</languages>
+</extension>

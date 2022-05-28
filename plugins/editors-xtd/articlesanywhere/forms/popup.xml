@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config addfieldprefix="RegularLabs\Library\Form\Field">
+	<fieldset name="filters">
+		<field name="filters" type="Subform"
+			   formsource="plugins/editors-xtd/articlesanywhere/forms/filters_free.xml"
+			   multiple="false" />
+	</fieldset>
+
+	<fieldset name="data_tags">
+		<field name="data_tags" type="Subform"
+			   formsource="plugins/editors-xtd/articlesanywhere/forms/data_tag.xml"
+			   multiple="true" buttons="move,add,remove"
+			   class="rl-subform rl-hide-main-buttons" />
+	</fieldset>
+
+	<fieldset name="extra_attributes">
+		<field name="@output_when_empty" type="OnlyPro"
+			   label="AA_OUTPUT_WHEN_EMPTY"
+			   description="AA_OUTPUT_WHEN_EMPTY_DESC" />
+
+		<field name="@settings_multiple__a" type="Block" start="1" label="AA_MULTIPLE_ARTICLES" />
+
+		<field name="@ordering" type="OnlyPro"
+			   label="AA_ORDERING"
+			   description="AA_ORDERING_DESC" />
+		<field name="@use_limit" type="OnlyPro"
+			   label="AA_LIMIT"
+			   description="AA_LIMIT_DESC" />
+		<field name="@use_pagination" type="OnlyPro"
+			   label="AA_PAGINATION"
+			   description="AA_PAGINATION_DESC" />
+		<field name="@separator" type="OnlyPro"
+			   label="AA_SEPARATOR"
+			   description="AA_SEPARATOR_DESC" />
+
+		<field name="@settings_multiple__b" type="Block" end="1" />
+	</fieldset>
+</config>

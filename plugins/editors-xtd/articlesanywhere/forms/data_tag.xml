@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldprefix="RegularLabs\Library\Form\Field">
+	<fieldset>
+		<field name="@no_type__a" type="ShowOn" value="type:" />
+		<field name="type" type="Radio" default=""
+			   class="btn-group rl-btn-group rl-btn-group-separate btn-group-md"
+			   label="" hiddenLabel="true">
+			<option value="" class="hidden">- %s -,JGLOBAL_SELECT_AN_OPTION</option>
+			<option value="article" class="btn btn-outline-info mt-1">AA_FULL_ARTICLE</option>
+			<option value="title" class="btn btn-outline-info mt-1">JGLOBAL_TITLE</option>
+			<option value="text" class="btn btn-outline-info mt-1">RL_CONTENT</option>
+			<option value="readmore" class="btn btn-outline-info mt-1">AA_READMORE_LINK</option>
+			<option value="image" class="btn btn-outline-info mt-1">RL_IMAGE</option>
+			<option value="author" class="btn btn-outline-info mt-1">JAUTHOR</option>
+			<option value="date" class="btn btn-outline-info mt-1">RL_DATE</option>
+			<option value="hits" class="btn btn-outline-info mt-1">JGLOBAL_HITS</option>
+			<option value="category" class="btn btn-outline-info mt-1">JCATEGORY</option>
+			<option value="@parent-category" disabled="disabled" class="btn btn-outline-info mt-1">%s*,JGLOBAL_SHOW_PARENT_CATEGORY_LABEL</option>
+			<option value="@tags" disabled="disabled" class="btn btn-outline-info mt-1">%s*,RL_TAGS</option>
+			<option value="@field" disabled="disabled" class="btn btn-outline-info mt-1">%s*,RL_FIELD</option>
+			<option value="@count" disabled="disabled" class="btn btn-outline-info mt-1">%s*,AA_COUNT</option>
+			<option value="newline" class="btn btn-outline-info mt-1">AA_NEWLINE</option>
+		</field>
+
+		<field name="@type_only_pro" type="Note" class="form-text"
+			   text="* %s,RL_ONLY_AVAILABLE_IN_PRO" />
+		<field name="@no_type__b" type="ShowOn" />
+
+		<!-- SIMPLE STUFF -->
+		<field name="@author_title" type="Note" title="JAUTHOR" showon="type:author" />
+		<field name="@hits_title" type="Note" title="JGLOBAL_HITS" showon="type:hits" />
+		<field name="@tags_title" type="Note" title="RL_TAGS" showon="type:tags" />
+		<field name="@count_title" type="Note" title="AA_COUNT" showon="type:count" />
+		<field name="@newline_title" type="Note" class="alert alert-success m-0 p-1 text-center"
+			   text="⏎"
+			   showon="type:newline" />
+
+		<!-- LAYOUT -->
+		<field name="@article__a" type="ShowOn" value="type:article" />
+		<field name="@article_title" type="Note" title="AA_FULL_ARTICLE" />
+		<field name="article_layout" type="Text"
+			   hint="JDEFAULT"
+			   label="AA_FULL_ARTICLE_LAYOUT"
+			   description="AA_FULL_ARTICLE_LAYOUT_DESC" />
+		<field name="@article__b" type="ShowOn" />
+
+		<!-- TITLE -->
+		<field name="@title__a" type="ShowOn" value="type:title" />
+		<field name="@title_title" type="Note" title="JGLOBAL_TITLE" />
+		<field name="title_heading" type="List" default="text"
+			   label="AA_TITLE_HEADING"
+			   description="AA_TITLE_HEADING_DESC">
+			<option value="">JNONE</option>
+			<option value="h1">RL_HEADING_1</option>
+			<option value="h2">RL_HEADING_2</option>
+			<option value="h3">RL_HEADING_3</option>
+			<option value="h4">RL_HEADING_4</option>
+			<option value="h5">RL_HEADING_5</option>
+			<option value="h6">RL_HEADING_6</option>
+		</field>
+		<field name="title_add_link" type="Radio" default="0"
+			   class="btn-group rl-btn-group btn-group-md btn-group-yesno"
+			   label="AA_ADD_LINK_TAG"
+			   description="AA_TITLE_ADD_LINK_TAG_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="@title__b" type="ShowOn" />
+
+		<!-- CATEGORY -->
+		<field name="@category__a" type="ShowOn" value="type:category" />
+		<field name="@category_category" type="Note" text="JCATEGORY" />
+		<field name="category_add_link" type="Radio" default="0"
+			   class="btn-group rl-btn-group btn-group-md btn-group-yesno"
+			   label="AA_ADD_LINK_TAG"
+			   description="AA_ADD_LINK_TAG_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="@category__b" type="ShowOn" />
+
+		<!-- PARENT CATEGORY -->
+		<field name="@parent_category__a" type="ShowOn" value="type:parent-category" />
+		<field name="@parent_category_parent_category" type="Note" text="JGLOBAL_SHOW_PARENT_CATEGORY_LABEL" />
+		<field name="parent_category_add_link" type="Radio" default="0"
+			   class="btn-group rl-btn-group btn-group-md btn-group-yesno"
+			   label="AA_ADD_LINK_TAG"
+			   description="AA_ADD_LINK_TAG_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="@parent_category__b" type="ShowOn" />
+
+		<!-- TEXT -->
+		<field name="@text__a" type="ShowOn" value="type:text" />
+		<field name="@text_title" type="Note" title="RL_CONTENT" />
+		<field name="text_key" type="List" default="text"
+			   label="AA_TEXT_TYPE"
+			   description="AA_TEXT_TYPE_DESC">
+			<option value="text">AA_ALL_TEXT</option>
+			<option value="introtext">AA_INTRO_TEXT</option>
+			<option value="fulltext">AA_FULL_TEXT</option>
+		</field>
+		<field name="text_limit_by" type="List" default=""
+			   label="AA_TEXT_LIMIT_BY"
+			   description="AA_TEXT_LIMIT_BY_DESC">
+			<option value="">JNONE</option>
+			<option value="characters">RL_CHARACTERS</option>
+			<option value="words">RL_WORDS</option>
+			<option value="paragraphs">RL_PARAGRAPHS</option>
+		</field>
+		<field name="text_max_length_characters" type="Range"
+			   default="200"
+			   min="10" max="1000" step="10"
+			   showon="text_limit_by:characters" />
+		<field name="text_max_length_words" type="Range"
+			   default="50"
+			   min="10" max="200" step="10"
+			   showon="text_limit_by:words" />
+		<field name="text_max_length_paragraphs" type="Range"
+			   default="3"
+			   min="1" max="10" step="1"
+			   showon="text_limit_by:paragraphs" />
+		<field name="use_ellipsis" type="Radio"
+			   class="btn-group rl-btn-group btn-group-md btn-group-yesno"
+			   default=""
+			   label="AA_ADD_ELLIPSIS"
+			   description="AA_ADD_ELLIPSIS_DESC">
+			<option value="">JDEFAULT</option>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="text_strip" type="Radio" default="0"
+			   class="btn-group rl-btn-group btn-group-md btn-group-yesno"
+			   label="AA_STRIP_HTML_TAGS"
+			   description="AA_STRIP_HTML_TAGS_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="@text__b" type="ShowOn" />
+
+		<!-- READMORE -->
+		<field name="@readmore__a" type="ShowOn" value="type:readmore" />
+		<field name="@readmore_title" type="Note" title="AA_READMORE_LINK" />
+		<field name="readmore_text" type="Text"
+			   hint="JDEFAULT"
+			   label="AA_READMORE_TEXT"
+			   description="AA_READMORE_TEXT_DESC" />
+		<field name="readmore_class" type="Text"
+			   hint="JDEFAULT"
+			   label="AA_CLASSNAME"
+			   description="AA_CLASSNAME_DESC" />
+		<field name="@readmore__b" type="ShowOn" />
+
+		<!-- IMAGE -->
+		<field name="@image__a" type="ShowOn" value="type:image" />
+		<field name="@image_title" type="Note" title="RL_IMAGE" />
+		<field name="image_key" type="Radio" default="image-intro" hiddenLabel="true"
+			   class="btn-group rl-btn-group btn-group-md">
+			<option value="image-intro" class="btn btn-outline-info">AA_IMAGE_TITLES_INTRO</option>
+			<option value="image-fulltext" class="btn btn-outline-info">AA_IMAGE_TITLES_FULLTEXT</option>
+			<option value="content" class="btn btn-outline-info">AA_IMAGE_FROM_CONTENT</option>
+		</field>
+		<field name="image_content_type" type="Radio" default="random"
+			   class="btn-group rl-btn-group btn-group-md"
+			   label="AA_IMAGE_FROM_CONTENT"
+			   showon="image_key:content">
+			<option value="random" class="btn btn-outline-info">RL_RANDOM</option>
+			<option value="select" class="btn btn-outline-info">RL_SPECIFY</option>
+		</field>
+		<field name="image_number" type="Range"
+			   default="1"
+			   min="1" max="20"
+			   label="AA_IMAGE_NUMBER"
+			   description="AA_IMAGE_NUMBER_DESC"
+			   showon="image_key:content[AND]image_content_type:select" />
+		<field name="image_width" type="Range"
+			   default="0"
+			   min="0" max="1200" step="10"
+			   hint="RL_AUTOMATIC"
+			   label="RL_WIDTH"
+			   description="%s&lt;br&gt;%s,RL_RESIZE_IMAGES_WIDTH_DESC,RL_LEAVE_EMPTY_FOR_DEFAULT" />
+		<field name="image_height" type="Range"
+			   default="0"
+			   min="0" max="1200" step="10"
+			   hint="RL_AUTOMATIC"
+			   label="RL_HEIGHT"
+			   description="%s&lt;br&gt;%s,RL_RESIZE_IMAGES_HEIGHT_DESC,RL_LEAVE_EMPTY_FOR_DEFAULT" />
+		<field name="image_add_link" type="Radio" default="0"
+			   class="btn-group rl-btn-group btn-group-md btn-group-yesno"
+			   label="AA_ADD_LINK_TAG"
+			   description="AA_ADD_LINK_TAG_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="@image__b" type="ShowOn" />
+
+		<!-- DATE -->
+		<field name="@date__a" type="ShowOn" value="type:date" />
+		<field name="@date_title" type="Note" title="RL_DATE" />
+		<field name="date_key" type="List" default="created">
+			<option value="created">JGLOBAL_FIELD_CREATED_LABEL</option>
+			<option value="modified">JGLOBAL_FIELD_MODIFIED_LABEL</option>
+			<option value="publish-up">JGLOBAL_FIELD_PUBLISH_UP_LABEL</option>
+			<option value="publish-down">JGLOBAL_FIELD_PUBLISH_DOWN_LABEL</option>
+		</field>
+		<field name="date_format" type="List" default=""
+			   label="JGLOBAL_DATE_FORMAT_LABEL">
+			<option value="">JDEFAULT</option>
+			<option value="Y-m-d">1979-06-15</option>
+			<option value="Y-m-d H:i">1979-06-15 13:45</option>
+			<option value="Y-m-d H:i:s">1979-06-15 13:45:00</option>
+			<option value="Y-d-m">1979-15-06</option>
+			<option value="Y-d-m H:i">1979-15-06 13:45</option>
+			<option value="Y-d-m H:i:s">1979-15-06 13:45:00</option>
+			<option value="F jS Y">June 15th 1979</option>
+			<option value="l, j F Y">Friday, 15 June 1979</option>
+			<option value="other">RL_OTHER</option>
+		</field>
+		<field name="@date_custom_format__a" type="ShowOn" value="date_format:other" />
+		<field name="date_format_custom" type="Text"
+			   default="Y-m-d H:i:s"
+			   label="RL_CUSTOM_FORMAT" />
+		<field name="@note__date_formats" type="Note" class="rl-alert alert alert-info rl-alert-light"
+			   text="RL_MORE_INFO_PHP_DATES,https://www.php.net/manual/en/datetime.format.php" />
+		<field name="@date_custom_format__b" type="ShowOn" />
+		<field name="@date__b" type="ShowOn" />
+
+	</fieldset>
+</form>
