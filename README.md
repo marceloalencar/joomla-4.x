@@ -1,16 +1,12 @@
-# Portal padrão em CMS Joomla 3.9.6
-
-Se tiverem dificuldades, podem entrar em contato: tiagovtg@gmail.com
+# Portal padrão em CMS Joomla 4.1.4
 
 ## Sobre esta versão
 
-O Joomla 3.9.6 é recomendado para versões do PHP 5.3.10+. Melhor usando PHP 7.2.+
-
-_Atualização somente do Tema_ pode ser feito separadamente por esse outro [repositório do Bernado](https://github.com/dioubernardo/pip-joomla).
+O Joomla 4.1.4 é recomendado para versões do PHP 7.4 ou posterior.
 
 ### Acompanhe as atualizações do projeto
 
-Participe do grupo do google chamado [Joomla! e-Gov](https://groups.google.com/forum/?hl=pt-BR#!forum/joomla-e-gov-br) para se manter informado sobre o Portal Padrão em CMS Joomla. As atualizações não possuem data programada e ocorrem de acordo com a disponibilidade dos voluntários participantes.
+As atualizações não possuem data programada e ocorrem de acordo com a disponibilidade dos voluntários participantes.
 
 ### Atenção
 
@@ -27,7 +23,7 @@ ESTE PROJETO É RECOMENDADO PARA PROFISSIONAIS COM EXPERIÊNCIA NA UTILIZAÇÃO 
 
 Não é mais necessário alterar o arquivo configuration.php manualmente.
 
-O instalador padrão do CMS Joomla! 3.x foi customizado para configurar uma instalação padrão do CMS Joomla! com componentes, módulos, template e conteúdo de exemplo do Portal Padrão.
+O instalador padrão do CMS Joomla! 4.x foi customizado para configurar uma instalação padrão do CMS Joomla! com componentes, módulos, template e conteúdo de exemplo do Portal Padrão.
 
 ## Problemas na instalação
 
@@ -50,8 +46,6 @@ memory_limit=1280M
 ;(valor padrão 128M, alterado para 1280M)
 
 Não precisa de aumentar tanto, mas pode ir testando se quiser, exemplo, memoria padrão é 128M, pode ir subindo 256M,512M, 1024M
-
-Se tiverem dificuldades, podem entrar em contato: tiagovtg@gmail.com
 
 ## Utilizando Docker
 
@@ -150,4 +144,4 @@ Confira a documentação disponível até o momento no repositório provisório 
 
 ## Desenvolvimento
 
-- [Comunidade Joomla Calango](http://www.joomlacalango.org/)
+- [Comunidade Joomla Calango](https://groups.google.com/g/joomlacalango)
