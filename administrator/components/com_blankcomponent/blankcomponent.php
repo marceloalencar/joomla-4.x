@@ -13,7 +13,7 @@
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
 $app = JFactory::getApplication();
-$admin = $app->isAdmin();
+$admin = $app->isClient('administrator');
 if($admin==1)
 	{
 ?>
@@ -33,7 +33,7 @@ else
 	$controller = JControllerLegacy::getInstance('BlankComponent');
 
 	// Perform the Request task
-	$controller->execute(JRequest::getCmd('task'));
+	$controller->execute($app->input->getCmd('task'));
 
 	// Redirect if set by the controller
 	$controller->redirect();
