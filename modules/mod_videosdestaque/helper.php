@@ -13,7 +13,7 @@ class ModVideosDestaqueHelper
 {
 	public static function getItems( &$params )
 	{
-		return json_decode($params->get('list_videos'));
+		return (array) $params->get('list_videos');
 	}
 
 	public static function showPlayer( $url, $qtd_itens )

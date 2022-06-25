@@ -11,19 +11,26 @@ defined('_JEXEC') or die;
 ?>
 <div class="row-fluid chamadas-secundarias">
 <?php
-$span_unit = 12 / count($items->name);
-for ($i=0, $limit = count($items->name); $i < $limit; $i++):
-	$class = 'module span' . $span_unit;
+if (count($items) == 0)
+{
+	// Caso não existam vídeos...
+}
+else
+{
+	$span_unit = 12 / count($items);
+	for ($i=0, $limit = count($items); $i < $limit; $i++):
+		$class = 'module span' . $span_unit;
 ?>
 	<div class="<?php echo $class ?>">
 		<div class="video">
-			<?php ModVideosDestaqueHelper::showPlayer( $items->url[$i], count($items->url) ); ?>
+			<?php ModVideosDestaqueHelper::showPlayer( $items["list_videos$i"]->url, count($items) ); ?>
 		</div>
-		<h2><strong><?php echo $items->name[$i]; ?></strong></h2>
-		<p class="description"><?php echo $items->description[$i]; ?></p>
+		<h2><strong><?php echo $items["list_videos$i"]->name; ?></strong></h2>
+		<p class="description"><?php echo $items["list_videos$i"]->description; ?></p>
 	</div>
-<?php 
+<?php
 endfor;
+}
 ?>
 	
     <?php if( !empty($text_link_footer) && !empty($url_link_footer) ): ?>
