@@ -1,5 +1,6 @@
 <?php
 defined('_JEXEC') or die;
+use Joomla\Utilities\ArrayHelper;
 
 JLoader::register('AgendaDirigentesHelper', JPATH_ADMINISTRATOR . '/components/com_agendadirigentes/helpers/agendadirigentes.php');
 
@@ -14,7 +15,7 @@ abstract class JHtmlAgendaDirigentesHelper
 			0	=> array('unfeatured',	$context . '.featured',	'COM_AGENDADIRIGENTES_HELPER_UNFEATURED',	'COM_AGENDADIRIGENTES_HELPER_TOGGLE_TO_FEATURE'),
 			1	=> array('featured',	$context . '.unfeatured',	'COM_AGENDADIRIGENTES_HELPER_FEATURED',		'COM_AGENDADIRIGENTES_HELPER_TOGGLE_TO_UNFEATURE'),
 		);
-		$state	= JArrayHelper::getValue($states, (int) $value, $states[1]);
+		$state	= ArrayHelper::getValue($states, (int) $value, $states[1]);
 		$icon	= $state[0];
 
 		if ($canChange)

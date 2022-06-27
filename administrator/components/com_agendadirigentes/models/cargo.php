@@ -1,6 +1,7 @@
 <?php
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
+use Joomla\Utilities\ArrayHelper;
  
 // import Joomla modelform library
 jimport('joomla.application.component.modeladmin');
@@ -110,7 +111,7 @@ class AgendaDirigentesModelCargo extends JModelAdmin
         {
             // Sanitize the ids.
             $pks = (array) $pks;
-            JArrayHelper::toInteger($pks);
+            ArrayHelper::toInteger($pks);
 
             if (empty($pks))
             {

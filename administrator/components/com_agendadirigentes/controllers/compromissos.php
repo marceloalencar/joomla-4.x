@@ -9,6 +9,7 @@
  
 // impedir acesso direto ao arquivo
 defined('_JEXEC') or die;
+use Joomla\Utilities\ArrayHelper;
  
 // import Joomla controlleradmin library
 jimport('joomla.application.component.controlleradmin');
@@ -51,7 +52,7 @@ class AgendaDirigentesControllerCompromissos extends JControllerAdmin
 			$ids    = $this->input->get('cid', array(), 'array');
 			$values = array('featured' => 1, 'unfeatured' => 0);
 			$task   = $this->getTask();
-			$value  = JArrayHelper::getValue($values, $task, 0, 'int');
+			$value  = ArrayHelper::getValue($values, $task, 0, 'int');
 
 			$model = $this->getModel();
 			$fields = array('car.catid', 'comp.id', 'comp.created_by');

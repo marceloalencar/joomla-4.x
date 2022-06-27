@@ -1,6 +1,7 @@
 <?php
 // No direct access
 defined('_JEXEC') or die('Restricted access');
+use Joomla\Utilities\ArrayHelper;
  
 // import Joomla table library
 jimport('joomla.database.table');
@@ -35,7 +36,7 @@ class AgendaDirigentesTableDirigente extends JTable
 		$k = $this->_tbl_key;
 
 		// Sanitize input.
-		JArrayHelper::toInteger($pks);
+		ArrayHelper::toInteger($pks);
 		$userId = (int) $userId;
 		$state = (int) $state;
 

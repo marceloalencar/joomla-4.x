@@ -9,6 +9,7 @@
  
 // impedir acesso direto ao arquivo
 defined('_JEXEC') or die;
+use Joomla\Utilities\ArrayHelper;
  
 // import the list field type
 jimport('joomla.form.helper');
@@ -119,7 +120,7 @@ class JFormFieldDirigentesTags extends JFormFieldTag
 			}
 			elseif (is_array($published))
 			{
-				JArrayHelper::toInteger($published);
+				ArrayHelper::toInteger($published);
 				$query->where('a.state IN (' . implode(',', $published) . ')');
 			}
 
