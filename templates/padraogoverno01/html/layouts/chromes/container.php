@@ -23,7 +23,7 @@ if(! empty($module->content) ):
 	}
 	else
 	{
-	$class = $params->get('moduleclass_sfx');
+	$class = is_null($params->get('moduleclass_sfx')) ? '' : $params->get('moduleclass_sfx');
 
 	$container_class = '';
 	$container_class_pos = strpos($class, 'container-class-');
@@ -48,9 +48,10 @@ if(! empty($module->content) ):
 	?>
 	<div class="row-fluid module <?php echo $class; ?>">
 		<?php if ($module->showtitle): ?>
-			<?php if(strpos($params->get('moduleclass_sfx'), 'no-outstanding-title')===false): ?><div class="outstanding-header"><?php endif; ?>
-		 	<h<?php echo $headerLevel; ?> <?php if(strpos($params->get('moduleclass_sfx'), 'no-outstanding-title')===false): ?>class="outstanding-title"<?php endif; ?>><span><?php echo $title; ?></span></h<?php echo $headerLevel; ?>>
-		 	<?php if(strpos($params->get('moduleclass_sfx'), 'no-outstanding-title')===false): ?></div><?php endif; ?>
+			<?php $class_outstandingcheck = is_null($params->get('moduleclass_sfx')) ? '' : $params->get('moduleclass_sfx'); ?>
+			<?php if(strpos($class_outstandingcheck, 'no-outstanding-title')===false): ?><div class="outstanding-header"><?php endif; ?>
+			<h<?php echo $headerLevel; ?> <?php if(strpos($class_outstandingcheck, 'no-outstanding-title')===false): ?>class="outstanding-title"<?php endif; ?>><span><?php echo $title; ?></span></h<?php echo $headerLevel; ?>>
+			<?php if(strpos($class_outstandingcheck, 'no-outstanding-title')===false): ?></div><?php endif; ?>
 		<?php endif; ?>
 		<?php if($container_class != ''): ?><div class="<?php echo $container_class; ?>"><?php endif; ?>
 		<?php echo $module->content; ?>
