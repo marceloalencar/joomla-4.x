@@ -132,7 +132,6 @@ INSERT INTO `#__assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `titl
 (147, 142, 191, 192, 3, 'com_content.article.48', 'Release 5: Título do release entre 35 e 90 caracteres', '{\"core.delete\":[],\"core.edit\":[],\"core.edit.state\":[]}'),
 (148, 18, 284, 285, 2, 'com_modules.module.155', 'Assessoria de Comunicação do Órgão', '{\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1}}'),
 (149, 18, 286, 287, 2, 'com_modules.module.156', 'ÁREA DE IMPRENSA - linha 2', '{\"core.delete\":[],\"core.edit\":[],\"core.edit.state\":[]}'),
-(150, 18, 288, 289, 2, 'com_modules.module.157', 'Agenda do responsável pelo órgão', '{\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1}}'),
 (151, 18, 290, 291, 2, 'com_modules.module.158', 'Redes Sociais - Módulo twitter e facebook da área de imprensa', '{\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1}}'),
 (153, 18, 292, 293, 2, 'com_modules.module.160', 'Galeria de vídeos alternativa', '{\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1}}'),
 (154, 1, 435, 436, 1, 'com_phocagallery', 'com_phocagallery', '{\"core.admin\":[],\"core.manage\":[],\"core.create\":[],\"core.delete\":[],\"core.edit\":[],\"core.edit.state\":[]}'),
@@ -194,14 +193,10 @@ INSERT INTO `#__assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `titl
 (219, 216, 174, 175, 4, 'com_content.article.67', 'Imagem 3: título com até 45 caracteres', ''),
 (220, 216, 176, 177, 4, 'com_content.article.68', 'Imagem 4: título com até 45 caracteres', ''),
 (221, 216, 178, 179, 4, 'com_content.article.69', 'SEM Imagem: título com até 45 caracteres', ''),
-(248, 18, 358, 359, 2, 'com_modules.module.198', 'Botões de compartilhamento, detalhe de autoridades', '{\"core.delete\":[],\"core.edit\":[],\"core.edit.state\":[]}'),
-(249, 18, 360, 361, 2, 'com_modules.module.199', 'Agenda da Autoridade', '{\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1}}'),
 (250, 18, 362, 363, 2, 'com_modules.module.130', 'Planejamento', ''),
 (251, 18, 364, 365, 2, 'com_modules.module.131', 'Lei de acesso à informação', ''),
 (252, 18, 366, 367, 2, 'com_modules.module.132', 'Agenda', ''),
 (253, 18, 368, 369, 2, 'com_modules.module.111', 'linha 02 (OLD)', '{\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1}}'),
-(268, 18, 370, 371, 2, 'com_modules.module.200', 'Título', '{\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1}}'),
-(269, 18, 372, 373, 2, 'com_modules.module.201', 'Título (2)', ''),
 (272, 3, 6, 7, 2, 'com_banners.category.56', 'Banner rotativo da página inicial', '{\"core.create\":{\"6\":1,\"3\":1},\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1}}'),
 (273, 18, 374, 375, 2, 'com_modules.module.202', 'Portal Padrão', '{\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1}}'),
 (274, 60, 119, 120, 3, 'com_content.article.71', 'Site Secom, Portal do Planalto e Portal Brasil adotam nova identidade digital', '{\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1}}'),
@@ -218,7 +213,6 @@ INSERT INTO `#__assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `titl
 (285, 18, 390, 391, 2, 'com_modules.module.207', 'Novo Release', '{\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1}}'),
 (286, 18, 392, 393, 2, 'com_modules.module.123', 'linha 2, coluna 1', '{\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1}}'),
 (287, 18, 394, 395, 2, 'com_modules.module.119', 'linha 02', '{\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1}}'),
-(289, 18, 396, 397, 2, 'com_modules.module.208', 'Agenda do responsável pelo órgão', '{\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1}}'),
 (291, 18, 398, 399, 2, 'com_modules.module.210', 'Vídeos em destaque', '{\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1},\"module.edit.frontend\":[]}'),
 (292, 1, 501, 502, 1, 'com_fields', 'com_fields', '{}'),
 (293, 1, 503, 504, 1, 'com_associations', 'com_associations', '{}'),
@@ -1444,8 +1438,7 @@ INSERT INTO `#__usergroups` (`id`, `parent_id`, `lft`, `rgt`, `title`) VALUES
 (5, 4, 11, 12, 'Publisher'),
 (6, 1, 2, 5, 'Manager'),
 (7, 6, 3, 4, 'Administrator'),
-(8, 1, 16, 17, 'Super Users'),
-(13, 3, 8, 9, 'Agente de Dirigentes - Gabinete do Ministro');
+(8, 1, 16, 17, 'Super Users');
 
 TRUNCATE TABLE `#__users`;
 INSERT INTO `#__users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`, `authProvider`) VALUES
